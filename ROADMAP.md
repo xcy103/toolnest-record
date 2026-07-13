@@ -68,6 +68,45 @@ Take on tools that need more learning, and tighten up quality.
 
 ---
 
+## Near-term Execution Plan (Jul 12 onward)
+
+Two-part plan: **finish the current tool library first, then internationalize (zh/en).**
+Same daily rhythm as before — ship to `toolnest`, write an English work log to
+`toolnest-record` each day.
+
+### Part 1 — Finish the tool library
+
+- **Day 1 — QR code generator (publish).** Last tool in the current registry.
+  Decision: use a small, mature QR library (e.g. `qrcode`) rather than hand-rolling
+  the encoder — the project is already taking on a dependency (next-intl) for i18n,
+  so zero-dep is no longer a hard constraint. Render to canvas, support download as
+  PNG. Flip `available: true`. **Tool library complete (7 tools).**
+
+### Part 2 — Chinese/English internationalization (next-intl)
+
+Chosen approach: **next-intl** with locale-prefixed URLs (`/en/...`, `/zh/...`).
+Confirmed compatible with Next 16 (peerDeps allow `^16.0.0`). **Default locale: English**
+(`/` redirects to `/en`) to lean into the "open to the world" goal and international SEO.
+Note: Next 16 deprecated `middleware` → renamed to `proxy`; the locale redirect must use
+the new `proxy.ts` convention (verify next-intl wiring against it during setup).
+
+- **Day 2 — i18n infrastructure (no visible change).** Install next-intl; add
+  `i18n/routing.ts` + `request.ts` + `navigation.ts`; wrap `next.config`; set up the
+  `proxy.ts` redirect; move everything in `app/` under `app/[locale]/`. Site still
+  builds and renders (English default). URLs become `/en/...`.
+- **Day 3 — Externalize copy into a dictionary.** Create `messages/en.json` with every
+  UI string (navbar, home, footer, ToolLayout, all 6 tool pages, plus tool
+  names/descriptions/categories from `lib/tools.ts`). Refactor components/pages to read
+  from translations via `useTranslations`. Still English-only, but data-driven.
+- **Day 4 — Chinese translation.** Create `messages/zh.json`, translating every entry
+  (including tool names, descriptions, and error messages).
+- **Day 5 — Language switcher + SEO.** Add a locale switcher in the navbar (reuse the
+  ThemeToggle localStorage pattern). Per-locale `<html lang>`, localized metadata
+  (title/description), `hreflang` tags, and a bilingual sitemap. QA both locales,
+  mobile pass, deploy.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Text: word/char counter · case converter · remove duplicate lines · text sorter · find & replace · text diff · lorem ipsum
