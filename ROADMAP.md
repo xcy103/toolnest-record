@@ -74,7 +74,11 @@ Two-part plan: **finish the current tool library first, then internationalize (z
 Same daily rhythm as before — ship to `toolnest`, write an English work log to
 `toolnest-record` each day.
 
-### Part 1 — Finish the tool library
+> **Status: Parts 1 & 2 complete (Jul 13–17).** Tool library finished (7 tools), and the
+> site is now bilingual (`/en`, `/zh`, English default) with a language switcher and a
+> bilingual sitemap. Phase 3 below is the current plan.
+
+### Part 1 — Finish the tool library ✅
 
 - **Day 1 — QR code generator (publish).** Last tool in the current registry.
   Decision: use a small, mature QR library (e.g. `qrcode`) rather than hand-rolling
@@ -82,7 +86,7 @@ Same daily rhythm as before — ship to `toolnest`, write an English work log to
   so zero-dep is no longer a hard constraint. Render to canvas, support download as
   PNG. Flip `available: true`. **Tool library complete (7 tools).**
 
-### Part 2 — Chinese/English internationalization (next-intl)
+### Part 2 — Chinese/English internationalization (next-intl) ✅
 
 Chosen approach: **next-intl** with locale-prefixed URLs (`/en/...`, `/zh/...`).
 Confirmed compatible with Next 16 (peerDeps allow `^16.0.0`). **Default locale: English**
@@ -104,6 +108,69 @@ the new `proxy.ts` convention (verify next-intl wiring against it during setup).
   ThemeToggle localStorage pattern). Per-locale `<html lang>`, localized metadata
   (title/description), `hreflang` tags, and a bilingual sitemap. QA both locales,
   mobile pass, deploy.
+
+---
+
+## Phase 3 — Grow the Library + Restructure Navigation (Jul 18 onward)
+
+Goal: add a batch of everyday-useful tools, and — because a single long home page stops
+scaling past ~10 tools — restructure the front-end around **category navigation** (not
+numeric pagination). Every new tool now needs both `en` and `zh` messages; the i18n
+scaffolding is already in place, so this is just an extra step per tool, not new plumbing.
+
+Ordering rationale: ship one wave of quick, high-traffic tools first (to reach ~12 tools,
+enough to make navigation worthwhile and testable), then do the navigation restructure so
+every later tool slots into it automatically, then continue with the remaining waves.
+
+### Wave 1 — Quick, high-traffic tools (~1 day each, no deps)
+
+- **Password generator** — `crypto.getRandomValues`; length + character-set options. High search volume.
+- **UUID generator** — `crypto.randomUUID`; v4, optional bulk count.
+- **Word / character counter** — counts, lines, reading time.
+- **Case converter** — UPPER/lower/Title/camelCase/snake_case/kebab-case.
+- **Number base converter** — bin / oct / dec / hex, live cross-conversion.
+
+New categories introduced: **Text**. (Password/UUID join **Generators**; base converter joins **Developer**.)
+
+### Front-end restructure — Category navigation
+
+Do this after Wave 1. Builds on the existing `lib/tools.ts` registry (category pages
+generate from `categoryKey`, so adding a tool stays a one-line registration).
+
+- **Navbar**: replace the single "All Tools" link with a **categories menu** (dropdown on
+  desktop, collapsible on mobile) listing each category.
+- **Category pages** at `/[locale]/c/<category>` — each lists only that category's tools.
+  Shorter pages, and each category gets its own indexable URL (good international SEO);
+  category names come from the messages. Add these to the sitemap generator too.
+- **Home** becomes a proper landing page: hero + a compact category overview / popular
+  tools that link into the category pages, instead of dumping every tool.
+- **Search**: a client-side instant filter over the registry (no backend), increasingly
+  useful as the list grows.
+- Keep a full "All tools" browse page (the current grouped view) for browse-everything users.
+
+### Wave 2 — Time cluster (extends the timezone tool)
+
+- **World clock** — common cities' current time at a glance, live-updating.
+- **Timezone meeting planner** — find overlapping working hours across a few zones.
+- **Countdown / date-diff** — time until a date, or duration between two dates.
+
+### Wave 3 — Developer tools (moderate effort)
+
+- **JWT decoder** — split and show the base64 segments (decode only, no verification).
+- **Regex tester** — live match highlighting against sample text.
+- **Cron expression explainer** — human-readable description of a cron string.
+- **Text diff** — line-by-line comparison of two texts.
+
+### Wave 4 — Color / design (broadens audience; new **Color** category)
+
+- **Color converter** — hex ↔ rgb ↔ hsl, with a picker.
+- **Contrast checker** — WCAG AA/AAA pass/fail for a text/background pair.
+- **Gradient generator** — build a CSS gradient and copy the code.
+
+### Wave 5 — Higher effort / dependencies (later)
+
+- **Markdown preview** (needs a markdown library), **image compressor/resizer** (canvas),
+  **unit converter**. Take these on once the higher-value, lower-effort waves are shipped.
 
 ---
 
