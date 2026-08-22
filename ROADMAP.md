@@ -62,8 +62,8 @@ Take on tools that need more learning, and tighten up quality.
 ## Ongoing / Company Admin (interspersed)
 
 - Branding: name treatment, simple logo, favicon
-- Custom domain
-- Privacy policy + terms (needed once there's traffic)
+- Custom domain — still open
+- ~~Privacy policy~~ ✅ (Aug 21) + terms (still open, needed once there's traffic)
 - Company formation follow-up (post-SSN steps)
 
 ---
@@ -113,6 +113,12 @@ the new `proxy.ts` convention (verify next-intl wiring against it during setup).
 
 ## Phase 3 — Grow the Library + Restructure Navigation (Jul 18 onward)
 
+> **Status: complete (Jul 20 – Aug 14).** All five waves shipped and the navigation
+> restructure is done. The site went from 7 tools to 23 across 8 categories, with three
+> ways to get around (instant search, category menu + category pages, and a full
+> `/tools` listing). What followed is recorded under "After Phase 3" at the end of
+> this file.
+
 Goal: add a batch of everyday-useful tools, and — because a single long home page stops
 scaling past ~10 tools — restructure the front-end around **category navigation** (not
 numeric pagination). Every new tool now needs both `en` and `zh` messages; the i18n
@@ -122,7 +128,7 @@ Ordering rationale: ship one wave of quick, high-traffic tools first (to reach ~
 enough to make navigation worthwhile and testable), then do the navigation restructure so
 every later tool slots into it automatically, then continue with the remaining waves.
 
-### Wave 1 — Quick, high-traffic tools (~1 day each, no deps)
+### Wave 1 — Quick, high-traffic tools ✅ (Jul 20–24)
 
 - **Password generator** — `crypto.getRandomValues`; length + character-set options. High search volume.
 - **UUID generator** — `crypto.randomUUID`; v4, optional bulk count.
@@ -132,7 +138,7 @@ every later tool slots into it automatically, then continue with the remaining w
 
 New categories introduced: **Text**. (Password/UUID join **Generators**; base converter joins **Developer**.)
 
-### Front-end restructure — Category navigation
+### Front-end restructure — Category navigation ✅ (Jul 27–28)
 
 Do this after Wave 1. Builds on the existing `lib/tools.ts` registry (category pages
 generate from `categoryKey`, so adding a tool stays a one-line registration).
@@ -148,39 +154,76 @@ generate from `categoryKey`, so adding a tool stays a one-line registration).
   useful as the list grows.
 - Keep a full "All tools" browse page (the current grouped view) for browse-everything users.
 
-### Wave 2 — Time cluster (extends the timezone tool)
+### Wave 2 — Time cluster ✅ (Jul 29–31)
 
 - **World clock** — common cities' current time at a glance, live-updating.
 - **Timezone meeting planner** — find overlapping working hours across a few zones.
 - **Countdown / date-diff** — time until a date, or duration between two dates.
 
-### Wave 3 — Developer tools (moderate effort)
+### Wave 3 — Developer tools ✅ (Aug 3–6)
 
 - **JWT decoder** — split and show the base64 segments (decode only, no verification).
 - **Regex tester** — live match highlighting against sample text.
 - **Cron expression explainer** — human-readable description of a cron string.
 - **Text diff** — line-by-line comparison of two texts.
 
-### Wave 4 — Color / design (broadens audience; new **Color** category)
+### Wave 4 — Colour / design ✅ (Aug 7–10)
 
 - **Color converter** — hex ↔ rgb ↔ hsl, with a picker.
 - **Contrast checker** — WCAG AA/AAA pass/fail for a text/background pair.
 - **Gradient generator** — build a CSS gradient and copy the code.
 
-### Wave 5 — Higher effort / dependencies (later)
+### Wave 5 — Higher effort / dependencies ✅ (Aug 11–14)
 
 - **Markdown preview** (needs a markdown library), **image compressor/resizer** (canvas),
   **unit converter**. Take these on once the higher-value, lower-effort waves are shipped.
 
 ---
 
+## After Phase 3 — Polish + Continued Backlog (Aug 17 onward)
+
+No new wave plan; work is picked from the backlog below, with polish days mixed in.
+
+- **Aug 17 — SEO / metadata pass.** Found that all 26 tool pages shared one title: metadata
+  can only be exported from a Server Component, and every tool page is a Client Component.
+  Fixed with a thin server `layout.tsx` per tool over a shared `lib/metadata.ts` — per-page
+  titles, descriptions, canonicals, `hreflang` for both locales, Open Graph/Twitter, and
+  JSON-LD structured data (`SoftwareApplication` per tool, `WebSite` on the home page).
+  Two real narrow-screen overflows fixed along the way.
+- **Aug 18 — JSON ↔ CSV converter** (27th tool). A hand-written RFC 4180 parser (quoted
+  fields, doubled quotes, embedded newlines, CRLF/CR/LF), conservative type detection, 31 tests.
+- **Aug 20 — Find & replace** (28th tool). Literal or regex, case sensitivity, whole-word
+  matching, live highlighted preview; 19 tests. The interesting part is escaping in both
+  directions — the search text and the replacement string.
+- **Aug 21 — About + Privacy pages.** The two pages promised back in Phase 1: what the site
+  is and how it's built, and a plain-language privacy note stating exactly what is stored
+  (a `theme` value in local storage, a `NEXT_LOCALE` cookie) and what is not (no analytics,
+  no ads, no third-party scripts, no uploads). Both bilingual, linked from the footer and
+  listed in the sitemap. Roadmap brought up to date the same day.
+
+**Still open:**
+
+- Real-file browser smoke test of the image compressor — its canvas path can't be verified
+  headlessly, and has been deliberately deferred.
+- Custom domain (once chosen, `NEXT_PUBLIC_SITE_URL` replaces the `toolnest.vercel.app`
+  fallback used by the sitemap and canonicals).
+- Backlog candidates next: JSON ↔ YAML, HTML entities, unix timestamp, favicon generator,
+  remove duplicate lines / text sorter.
+- Analytics deliberately **not** added — the privacy page now promises there is none, so
+  adding any would be a documented change, not a quiet one.
+
+---
+
 ## Tool Backlog (pick from here)
 
-Text: word/char counter · case converter · remove duplicate lines · text sorter · find & replace · text diff · lorem ipsum
-Encode: Base64 · URL · JWT decoder · HTML entities
-Data: JSON formatter · JSON ↔ CSV · JSON ↔ YAML
-Color: hex ↔ rgb · color picker · gradient generator · contrast checker
-Image: compressor · resizer · format converter · crop · favicon generator
-Time: unix timestamp · timezone converter · countdown
-Generators: password · UUID · QR code · hash
-Other: markdown preview · unit converter · percentage/BMI/tip calculators
+Built ones are struck through; the rest are still fair game.
+
+Text: ~~word/char counter~~ · ~~case converter~~ · remove duplicate lines · text sorter · ~~find & replace~~ · ~~text diff~~ · ~~lorem ipsum~~
+Encode: ~~Base64~~ · ~~URL~~ · ~~JWT decoder~~ · HTML entities
+Data: ~~JSON formatter~~ · ~~JSON ↔ CSV~~ · JSON ↔ YAML
+Color: ~~hex ↔ rgb~~ · ~~color picker~~ · ~~gradient generator~~ · ~~contrast checker~~
+Image: ~~compressor~~ · resizer · format converter · crop · favicon generator
+Time: unix timestamp · ~~timezone converter~~ · ~~countdown~~ · ~~world clock~~ · ~~meeting planner~~
+Generators: ~~password~~ · ~~UUID~~ · ~~QR code~~ · ~~hash~~
+Dev: ~~number base converter~~ · ~~regex tester~~ · ~~cron explainer~~
+Other: ~~markdown preview~~ · ~~unit converter~~ · percentage/BMI/tip calculators
