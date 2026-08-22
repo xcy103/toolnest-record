@@ -192,6 +192,11 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
   Two real narrow-screen overflows fixed along the way.
 - **Aug 18 — JSON ↔ CSV converter** (27th tool). A hand-written RFC 4180 parser (quoted
   fields, doubled quotes, embedded newlines, CRLF/CR/LF), conservative type detection, 31 tests.
+- **Aug 19 — Test suite.** The ad-hoc tests written for the trickier modules lived in temp
+  files and were lost after each run. Added a checked-in suite using Node's built-in
+  `node:test` runner and TypeScript stripping — `npm test`, no new dependencies — covering
+  calc, md5, colour, units, markdown and csv (34 tests, later 42). Required rewriting
+  `CalcError` without constructor parameter properties, which Node's strip-only mode can't run.
 - **Aug 20 — Find & replace** (28th tool). Literal or regex, case sensitivity, whole-word
   matching, live highlighted preview; 19 tests. The interesting part is escaping in both
   directions — the search text and the replacement string.
