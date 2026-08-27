@@ -205,6 +205,15 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
   (a `theme` value in local storage, a `NEXT_LOCALE` cookie) and what is not (no analytics,
   no ads, no third-party scripts, no uploads). Both bilingual, linked from the footer and
   listed in the sitemap. Roadmap brought up to date the same day.
+- **Aug 24 — HTML entity encoder / decoder** (29th tool). Escapes the five structural HTML
+  characters while leaving normal Unicode readable; decodes common named entities plus decimal
+  and hexadecimal numeric entities. Added tests for one-layer decoding and malformed entities.
+- **Aug 25 — Remove duplicate lines** (30th tool). Text cleanup utility that keeps the first
+  occurrence, with options for case sensitivity, whitespace trimming and blank-line handling.
+  Shared line-processing logic added with tests.
+- **Aug 26 — Text sorter** (31st tool). Sorts lines ascending or descending, alphabetically or
+  numerically, with optional duplicate removal. Reuses the shared line module and ships with
+  bilingual metadata, category/search wiring and tests.
 
 **Still open:**
 
@@ -212,8 +221,7 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
   headlessly, and has been deliberately deferred.
 - Custom domain (once chosen, `NEXT_PUBLIC_SITE_URL` replaces the `toolnest.vercel.app`
   fallback used by the sitemap and canonicals).
-- Backlog candidates next: JSON ↔ YAML, HTML entities, unix timestamp, favicon generator,
-  remove duplicate lines / text sorter.
+- Backlog candidates next: JSON ↔ YAML, unix timestamp, favicon generator.
 - Analytics deliberately **not** added — the privacy page now promises there is none, so
   adding any would be a documented change, not a quiet one.
 
@@ -223,8 +231,8 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
 
 Built ones are struck through; the rest are still fair game.
 
-Text: ~~word/char counter~~ · ~~case converter~~ · remove duplicate lines · text sorter · ~~find & replace~~ · ~~text diff~~ · ~~lorem ipsum~~
-Encode: ~~Base64~~ · ~~URL~~ · ~~JWT decoder~~ · HTML entities
+Text: ~~word/char counter~~ · ~~case converter~~ · ~~remove duplicate lines~~ · ~~text sorter~~ · ~~find & replace~~ · ~~text diff~~ · ~~lorem ipsum~~
+Encode: ~~Base64~~ · ~~URL~~ · ~~JWT decoder~~ · ~~HTML entities~~
 Data: ~~JSON formatter~~ · ~~JSON ↔ CSV~~ · JSON ↔ YAML
 Color: ~~hex ↔ rgb~~ · ~~color picker~~ · ~~gradient generator~~ · ~~contrast checker~~
 Image: ~~compressor~~ · resizer · format converter · crop · favicon generator
