@@ -214,6 +214,9 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
 - **Aug 26 — Text sorter** (31st tool). Sorts lines ascending or descending, alphabetically or
   numerically, with optional duplicate removal. Reuses the shared line module and ships with
   bilingual metadata, category/search wiring and tests.
+- **Aug 27 — Unix timestamp converter** (32nd tool). A focused Time tool for converting Unix
+  seconds/milliseconds to readable local time, UTC, ISO 8601 and back again. Added strict integer
+  parsing, JavaScript Date-range guards, negative timestamp coverage and per-locale page wiring.
 
 **Still open:**
 
@@ -221,7 +224,7 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
   headlessly, and has been deliberately deferred.
 - Custom domain (once chosen, `NEXT_PUBLIC_SITE_URL` replaces the `toolnest.vercel.app`
   fallback used by the sitemap and canonicals).
-- Backlog candidates next: JSON ↔ YAML, unix timestamp, favicon generator.
+- Backlog candidates next: JSON ↔ YAML, favicon generator.
 - Analytics deliberately **not** added — the privacy page now promises there is none, so
   adding any would be a documented change, not a quiet one.
 
@@ -236,7 +239,7 @@ Encode: ~~Base64~~ · ~~URL~~ · ~~JWT decoder~~ · ~~HTML entities~~
 Data: ~~JSON formatter~~ · ~~JSON ↔ CSV~~ · JSON ↔ YAML
 Color: ~~hex ↔ rgb~~ · ~~color picker~~ · ~~gradient generator~~ · ~~contrast checker~~
 Image: ~~compressor~~ · resizer · format converter · crop · favicon generator
-Time: unix timestamp · ~~timezone converter~~ · ~~countdown~~ · ~~world clock~~ · ~~meeting planner~~
+Time: ~~unix timestamp~~ · ~~timezone converter~~ · ~~countdown~~ · ~~world clock~~ · ~~meeting planner~~
 Generators: ~~password~~ · ~~UUID~~ · ~~QR code~~ · ~~hash~~
 Dev: ~~number base converter~~ · ~~regex tester~~ · ~~cron explainer~~
 Other: ~~markdown preview~~ · ~~unit converter~~ · percentage/BMI/tip calculators
