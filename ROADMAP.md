@@ -217,6 +217,10 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
 - **Aug 27 — Unix timestamp converter** (32nd tool). A focused Time tool for converting Unix
   seconds/milliseconds to readable local time, UTC, ISO 8601 and back again. Added strict integer
   parsing, JavaScript Date-range guards, negative timestamp coverage and per-locale page wiring.
+- **Aug 28 — JSON ↔ YAML converter** (33rd tool). Added a library-backed Data/Developer tool
+  using `yaml@2.9.0` rather than hand-rolling YAML parsing. Supports JSON → YAML, YAML → formatted
+  JSON, one-document-at-a-time validation, bilingual UI/metadata and tests for invalid JSON/YAML
+  plus multi-document rejection.
 
 **Still open:**
 
@@ -224,7 +228,8 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
   headlessly, and has been deliberately deferred.
 - Custom domain (once chosen, `NEXT_PUBLIC_SITE_URL` replaces the `toolnest.vercel.app`
   fallback used by the sitemap and canonicals).
-- Backlog candidates next: JSON ↔ YAML, favicon generator.
+- Backlog candidates next: favicon generator, image resizer / format converter / crop,
+  percentage/BMI/tip calculators.
 - Analytics deliberately **not** added — the privacy page now promises there is none, so
   adding any would be a documented change, not a quiet one.
 
@@ -236,7 +241,7 @@ Built ones are struck through; the rest are still fair game.
 
 Text: ~~word/char counter~~ · ~~case converter~~ · ~~remove duplicate lines~~ · ~~text sorter~~ · ~~find & replace~~ · ~~text diff~~ · ~~lorem ipsum~~
 Encode: ~~Base64~~ · ~~URL~~ · ~~JWT decoder~~ · ~~HTML entities~~
-Data: ~~JSON formatter~~ · ~~JSON ↔ CSV~~ · JSON ↔ YAML
+Data: ~~JSON formatter~~ · ~~JSON ↔ CSV~~ · ~~JSON ↔ YAML~~
 Color: ~~hex ↔ rgb~~ · ~~color picker~~ · ~~gradient generator~~ · ~~contrast checker~~
 Image: ~~compressor~~ · resizer · format converter · crop · favicon generator
 Time: ~~unix timestamp~~ · ~~timezone converter~~ · ~~countdown~~ · ~~world clock~~ · ~~meeting planner~~
