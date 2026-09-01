@@ -221,6 +221,12 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
   using `yaml@2.9.0` rather than hand-rolling YAML parsing. Supports JSON → YAML, YAML → formatted
   JSON, one-document-at-a-time validation, bilingual UI/metadata and tests for invalid JSON/YAML
   plus multi-document rejection.
+- **Aug 30 — Percentage calculator** (34th tool). Added three clearly labelled modes for percentage
+  of a number, part-to-whole ratio and percentage change. Handles zero denominators explicitly,
+  includes copy support, bilingual UI/metadata and shared calculation tests.
+- **Aug 31 — BMI calculator** (35th tool). Added metric and imperial adult BMI calculations,
+  standard screening categories and a clear non-diagnostic health note. Browser QA caught and fixed
+  a unit-switch rounding issue so the displayed result remains stable across measurement systems.
 
 **Still open:**
 
@@ -229,7 +235,7 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
 - Custom domain (once chosen, `NEXT_PUBLIC_SITE_URL` replaces the `toolnest.vercel.app`
   fallback used by the sitemap and canonicals).
 - Backlog candidates next: favicon generator, image resizer / format converter / crop,
-  percentage/BMI/tip calculators.
+  and the tip calculator.
 - Analytics deliberately **not** added — the privacy page now promises there is none, so
   adding any would be a documented change, not a quiet one.
 
@@ -247,4 +253,4 @@ Image: ~~compressor~~ · resizer · format converter · crop · favicon generato
 Time: ~~unix timestamp~~ · ~~timezone converter~~ · ~~countdown~~ · ~~world clock~~ · ~~meeting planner~~
 Generators: ~~password~~ · ~~UUID~~ · ~~QR code~~ · ~~hash~~
 Dev: ~~number base converter~~ · ~~regex tester~~ · ~~cron explainer~~
-Other: ~~markdown preview~~ · ~~unit converter~~ · percentage/BMI/tip calculators
+Other: ~~markdown preview~~ · ~~unit converter~~ · ~~percentage calculator~~ · ~~BMI calculator~~ · tip calculator
