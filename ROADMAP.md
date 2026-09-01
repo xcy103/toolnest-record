@@ -221,12 +221,11 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
   using `yaml@2.9.0` rather than hand-rolling YAML parsing. Supports JSON → YAML, YAML → formatted
   JSON, one-document-at-a-time validation, bilingual UI/metadata and tests for invalid JSON/YAML
   plus multi-document rejection.
-- **Aug 30 — Percentage calculator** (34th tool). Added three clearly labelled modes for percentage
-  of a number, part-to-whole ratio and percentage change. Handles zero denominators explicitly,
-  includes copy support, bilingual UI/metadata and shared calculation tests.
-- **Aug 31 — BMI calculator** (35th tool). Added metric and imperial adult BMI calculations,
-  standard screening categories and a clear non-diagnostic health note. Browser QA caught and fixed
-  a unit-switch rounding issue so the displayed result remains stable across measurement systems.
+- **Aug 31 — Percentage + BMI calculators** (34th and 35th tools). Shipped two focused everyday
+  calculators from one shared, tested calculation module. Percentage mode covers percent-of,
+  part-to-whole and percentage change with explicit zero handling. BMI supports metric/imperial
+  measurements, standard adult screening categories and a clear non-diagnostic health note.
+  Browser QA caught and fixed a unit-switch rounding issue so BMI stays stable across systems.
 
 **Still open:**
 
