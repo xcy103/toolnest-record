@@ -1,6 +1,6 @@
 # ToolNest — Roadmap
 
-A living plan for building ToolNest during OPT self-employment. The goal is steady, real progress: **one or two things a day, done in depth, ~4 hours**, learning while building. Simple tools take a day; more complex ones are split across 2–3 days. Learning days, infrastructure days, and company-admin tasks are mixed in so the work stays honest and sustainable over 1–2 months.
+A living plan for building ToolNest during OPT self-employment. The goal is steady, real progress: **one or two things a day, done in depth, with a 4.5-hour planned workday**, learning while building. Simple tools take a day; more complex ones are split across 2–3 days. Learning days, infrastructure days, and company-admin tasks are mixed in so the work stays honest and sustainable over 1–2 months.
 
 This file is updated as things change — it's a guide, not a contract.
 
@@ -13,6 +13,8 @@ This file is updated as things change — it's a guide, not a contract.
 
 ## Daily Rhythm (mixed pace)
 
+- **Workdays only:** Monday through Friday, using America/New_York dates. No scheduled development or work logs on Saturday or Sunday. Check the date before assigning a task; ask when a requested date conflicts with this rule.
+- **Hours:** 4.5 hours is the daily allocation, not an automatically verified time entry. Record actual owner work and learning time when confirmed.
 - **Simple tool** → ~1 day (learn the idea + build + style + ship)
 - **Complex tool** → 2–3 days (day 1: learn + scaffold page, day 2: build the logic, day 3: polish, mobile, test, ship)
 - **Learning day** → when a tool needs a new technique
@@ -227,6 +229,11 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
 - **Sep 1 — BMI calculator** (35th tool). Added metric and imperial adult BMI calculations,
   standard screening categories and a clear non-diagnostic health note. Browser QA caught and fixed
   a unit-switch rounding issue so the displayed result remains stable across measurement systems.
+- **Sep 2 — Tip calculator** (36th tool). Added custom/preset tip rates, currency formatting,
+  1–100-person splitting and copyable totals. Integer-cent arithmetic rounds tips once and
+  distributes remainder cents so payments add up exactly. Eight new tests include 2,400
+  amount/rate/party-size combinations. Browser QA also fixed a shared narrow-screen navbar overflow
+  and verified localized routes, copy, validation, category navigation and metadata.
 
 **Still open:**
 
@@ -234,8 +241,7 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
   headlessly, and has been deliberately deferred.
 - Custom domain (once chosen, `NEXT_PUBLIC_SITE_URL` replaces the `toolnest.vercel.app`
   fallback used by the sitemap and canonicals).
-- Backlog candidates next: favicon generator, image resizer / format converter / crop,
-  and the tip calculator.
+- Backlog candidates next: favicon generator and image resizer / format converter / crop.
 - Analytics deliberately **not** added — the privacy page now promises there is none, so
   adding any would be a documented change, not a quiet one.
 
@@ -253,4 +259,4 @@ Image: ~~compressor~~ · resizer · format converter · crop · favicon generato
 Time: ~~unix timestamp~~ · ~~timezone converter~~ · ~~countdown~~ · ~~world clock~~ · ~~meeting planner~~
 Generators: ~~password~~ · ~~UUID~~ · ~~QR code~~ · ~~hash~~
 Dev: ~~number base converter~~ · ~~regex tester~~ · ~~cron explainer~~
-Other: ~~markdown preview~~ · ~~unit converter~~ · ~~percentage calculator~~ · ~~BMI calculator~~ · tip calculator
+Other: ~~markdown preview~~ · ~~unit converter~~ · ~~percentage calculator~~ · ~~BMI calculator~~ · ~~tip calculator~~
