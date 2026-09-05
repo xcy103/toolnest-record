@@ -235,13 +235,23 @@ No new wave plan; work is picked from the backlog below, with polish days mixed 
   amount/rate/party-size combinations. Browser QA also fixed a shared narrow-screen navbar overflow
   and verified localized routes, copy, validation, category navigation and metadata.
 
-**Still open:**
+September 3–4 catch-up completed on **September 4, 2026** (`150fee5`):
+
+- **Sep 3 assigned task — Image Resizer** (37th tool). The owner reported no work on Sep 3;
+  the task was implemented in the Sep 4 catch-up session. Exact dimensions, original aspect lock,
+  previews, PNG/JPEG/WebP export, input limits and stale-result protection.
+- **Sep 4 task — Image Format Converter** (38th tool). Implemented in the same session with
+  quality controls, JPEG background colour, verified MIME types and bilingual metadata. Real
+  downloads were checked for format, dimensions and alpha. Combined verification: 83 tests,
+  lint clean, 105 static pages. Planned daily allocations do not establish actual owner hours.
+
+**Remaining work:**
 
 - Real-file browser smoke test of the image compressor — its canvas path can't be verified
   headlessly, and has been deliberately deferred.
 - Custom domain (once chosen, `NEXT_PUBLIC_SITE_URL` replaces the `toolnest.vercel.app`
   fallback used by the sitemap and canonicals).
-- Backlog candidates next: favicon generator and image resizer / format converter / crop.
+- Backlog candidates next: favicon generator and image crop.
 - Analytics deliberately **not** added — the privacy page now promises there is none, so
   adding any would be a documented change, not a quiet one.
 
@@ -255,7 +265,7 @@ Text: ~~word/char counter~~ · ~~case converter~~ · ~~remove duplicate lines~~ 
 Encode: ~~Base64~~ · ~~URL~~ · ~~JWT decoder~~ · ~~HTML entities~~
 Data: ~~JSON formatter~~ · ~~JSON ↔ CSV~~ · ~~JSON ↔ YAML~~
 Color: ~~hex ↔ rgb~~ · ~~color picker~~ · ~~gradient generator~~ · ~~contrast checker~~
-Image: ~~compressor~~ · resizer · format converter · crop · favicon generator
+Image: ~~compressor~~ · ~~resizer~~ · ~~format converter~~ · crop · favicon generator
 Time: ~~unix timestamp~~ · ~~timezone converter~~ · ~~countdown~~ · ~~world clock~~ · ~~meeting planner~~
 Generators: ~~password~~ · ~~UUID~~ · ~~QR code~~ · ~~hash~~
 Dev: ~~number base converter~~ · ~~regex tester~~ · ~~cron explainer~~
