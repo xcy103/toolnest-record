@@ -245,13 +245,28 @@ September 3–4 catch-up completed on **September 4, 2026** (`150fee5`):
   downloads were checked for format, dimensions and alpha. Combined verification: 83 tests,
   lint clean, 105 static pages. Planned daily allocations do not establish actual owner hours.
 
+September 7–9 work completed in the **September 9, 2026** AI-assisted catch-up session:
+
+- **Sep 7 assigned task — Image Cropper** (39th tool, `2c0b988`). Added exact pixel bounds,
+  centered aspect presets, a live selection preview and verified PNG/JPEG/WebP export. A real
+  four-colour fixture produced the expected 60 × 40 source quadrant.
+- **Sep 8 assigned task — Favicon Generator** (40th tool, `9293893`). Generates a multi-size
+  `favicon.ico` plus browser, Apple Touch and PWA PNG files. ICO offsets and payload lengths are
+  covered by binary-structure tests.
+- **Sep 9 — Image Compressor reliability pass** (`c844ce4`). Unified it with the verified image
+  encoder, added input/error/race protections and JPEG backgrounds, then completed the deferred
+  real-file browser test. Final verification: 87 tests, lint clean, 109 static pages.
+
+September 7 and 8 entries document assigned work completed on September 9; their 4.5-hour planned
+allocations do not establish actual owner hours on those dates.
+
 **Remaining work:**
 
-- Real-file browser smoke test of the image compressor — its canvas path can't be verified
-  headlessly, and has been deliberately deferred.
 - Custom domain (once chosen, `NEXT_PUBLIC_SITE_URL` replaces the `toolnest.vercel.app`
   fallback used by the sitemap and canonicals).
-- Backlog candidates next: favicon generator and image crop.
+- Terms page (still open and expected once the site has traffic).
+- The current named tool backlog is complete at 40 tools; choose or research the next tool wave
+  before assigning additional build days.
 - Analytics deliberately **not** added — the privacy page now promises there is none, so
   adding any would be a documented change, not a quiet one.
 
@@ -265,7 +280,7 @@ Text: ~~word/char counter~~ · ~~case converter~~ · ~~remove duplicate lines~~ 
 Encode: ~~Base64~~ · ~~URL~~ · ~~JWT decoder~~ · ~~HTML entities~~
 Data: ~~JSON formatter~~ · ~~JSON ↔ CSV~~ · ~~JSON ↔ YAML~~
 Color: ~~hex ↔ rgb~~ · ~~color picker~~ · ~~gradient generator~~ · ~~contrast checker~~
-Image: ~~compressor~~ · ~~resizer~~ · ~~format converter~~ · crop · favicon generator
+Image: ~~compressor~~ · ~~resizer~~ · ~~format converter~~ · ~~crop~~ · ~~favicon generator~~
 Time: ~~unix timestamp~~ · ~~timezone converter~~ · ~~countdown~~ · ~~world clock~~ · ~~meeting planner~~
 Generators: ~~password~~ · ~~UUID~~ · ~~QR code~~ · ~~hash~~
 Dev: ~~number base converter~~ · ~~regex tester~~ · ~~cron explainer~~
