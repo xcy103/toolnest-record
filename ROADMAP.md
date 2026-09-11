@@ -265,14 +265,58 @@ allocations do not establish actual owner hours on those dates.
   privacy and changes. Added footer and sitemap integration, corrected the About page's unsupported
   “open source” wording, and verified 87 tests, lint, 111 static pages and phone-width rendering.
 
+---
+
+## Next Tool Wave — Dates + Local Data (Sep 11–24)
+
+> **Status: planned.** Ten 4.5-hour workday allocations, Monday through Friday only. This wave
+> deliberately stays front-end-only: calculations and file parsing run in the browser, with no
+> uploads, accounts, paid APIs or additional server workload. Each tool includes English and Chinese
+> copy, metadata, registry/category/search wiring, focused logic tests and responsive browser QA.
+
+### Date and Calendar Tools (6 workdays)
+
+- **Sep 11 (Fri) — Date Add/Subtract Calculator.** Add or subtract days, weeks, months or years from
+  a selected date. Define end-of-month behaviour explicitly and keep date-only calculations stable
+  across time zones and daylight-saving changes.
+- **Sep 14 (Mon) — Business Days Between Dates.** Count weekdays between two dates with an option to
+  include the end date. Let users configure which weekdays are weekends; do not add a country-holiday
+  service in this first version.
+- **Sep 15 (Tue) — Business Date Calculator.** Move forward or backward by a requested number of
+  working days using the same configurable-weekend logic. Share and test the calendar logic created
+  for the previous tool.
+- **Sep 16 (Wed) — Week Number Calculator.** Show the ISO week number, ISO week-year and the Monday-to-
+  Sunday date range for any selected date, including year-boundary cases.
+- **Sep 17 (Thu) — Weekday Calculator.** Show the weekday for any valid date and provide a simple
+  occurrence search, such as finding the next date on a chosen weekday.
+- **Sep 18 (Fri) — Age Calculator.** Calculate calendar age in years, months and days, plus the next
+  birthday and days remaining. Keep this as a general date utility, not a medical or legal age claim.
+
+### Text and Data Tools (4 workdays)
+
+- **Sep 21 (Mon) — CSV Table Viewer.** Open CSV locally and present a readable table with column
+  search, sorting and row filtering. Reuse the tested RFC 4180 parser from the JSON ↔ CSV tool and
+  set practical browser-side row, column and file-size limits.
+- **Sep 22 (Tue) — List Comparison Tool.** Compare two line-based lists and show intersection,
+  left-only, right-only and combined unique results, with case and whitespace options. Build on the
+  existing shared line-processing utilities.
+- **Sep 23 (Wed) — Slug Generator.** Convert titles or phrases into URL-friendly slugs with separator,
+  lowercase and duplicate-separator controls. Define predictable handling for accented Latin text
+  and Chinese input instead of silently deleting meaningful content.
+- **Sep 24 (Thu) — Random Picker.** Pick one or more entries from a pasted list using
+  `crypto.getRandomValues`, with duplicate-removal and without-replacement options. Show the input
+  count and make repeated draws clear without adding storage or accounts.
+
 **Remaining work:**
 
 - Custom domain (once chosen, `NEXT_PUBLIC_SITE_URL` replaces the `toolnest.vercel.app`
   fallback used by the sitemap and canonicals).
 - Repository license decision: the source is public, but there is currently no `LICENSE` file.
   Choose whether to adopt MIT or another license before describing the project as open source.
-- The current named tool backlog is complete at 40 tools; choose or research the next tool wave
-  before assigning additional build days.
+- Complete the planned Sep 11–24 Dates + Local Data wave. If all ten tools ship, the library grows
+  from 40 to 50 tools without adding backend infrastructure.
+- Research the wave after Sep 24. Lightweight developer, CSS/design and everyday calculator tools
+  remain preferred; PDF, video and API-backed AI tools are deferred as higher-cost options.
 - Analytics deliberately **not** added — the privacy page now promises there is none, so
   adding any would be a documented change, not a quiet one.
 
