@@ -65,7 +65,7 @@ Take on tools that need more learning, and tighten up quality.
 
 - Branding: name treatment, simple logo, favicon
 - Custom domain — still open
-- ~~Privacy policy~~ ✅ (Aug 21) + terms (still open, needed once there's traffic)
+- ~~Privacy policy~~ ✅ (Aug 21) + ~~Terms of Use~~ ✅ (Sep 10)
 - Company formation follow-up (post-SSN steps)
 
 ---
@@ -260,11 +260,17 @@ September 7–9 work completed in the **September 9, 2026** AI-assisted catch-up
 September 7 and 8 entries document assigned work completed on September 9; their 4.5-hour planned
 allocations do not establish actual owner hours on those dates.
 
+- **Sep 10 — Terms of Use** (`facc5b7`). Added English and Chinese terms covering service scope,
+  user responsibility, acceptable use, source-code rights, availability, liability, third parties,
+  privacy and changes. Added footer and sitemap integration, corrected the About page's unsupported
+  “open source” wording, and verified 87 tests, lint, 111 static pages and phone-width rendering.
+
 **Remaining work:**
 
 - Custom domain (once chosen, `NEXT_PUBLIC_SITE_URL` replaces the `toolnest.vercel.app`
   fallback used by the sitemap and canonicals).
-- Terms page (still open and expected once the site has traffic).
+- Repository license decision: the source is public, but there is currently no `LICENSE` file.
+  Choose whether to adopt MIT or another license before describing the project as open source.
 - The current named tool backlog is complete at 40 tools; choose or research the next tool wave
   before assigning additional build days.
 - Analytics deliberately **not** added — the privacy page now promises there is none, so
