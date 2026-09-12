@@ -269,16 +269,18 @@ allocations do not establish actual owner hours on those dates.
 
 ## Next Tool Wave — Dates + Local Data (Sep 11–24)
 
-> **Status: planned.** Ten 4.5-hour workday allocations, Monday through Friday only. This wave
+> **Status: in progress (1/10 complete; 41 tools total).** Ten 4.5-hour workday allocations,
+> Monday through Friday only. This wave
 > deliberately stays front-end-only: calculations and file parsing run in the browser, with no
 > uploads, accounts, paid APIs or additional server workload. Each tool includes English and Chinese
 > copy, metadata, registry/category/search wiring, focused logic tests and responsive browser QA.
 
 ### Date and Calendar Tools (6 workdays)
 
-- **Sep 11 (Fri) — Date Add/Subtract Calculator.** Add or subtract days, weeks, months or years from
-  a selected date. Define end-of-month behaviour explicitly and keep date-only calculations stable
-  across time zones and daylight-saving changes.
+- **Sep 11 (Fri) — Date Add/Subtract Calculator** ✅ (`5c6c33e`). Adds or subtracts days, weeks,
+  months or years from a selected date. Month/year calculations clamp to the target month's last
+  valid day, while UTC calendar fields keep date-only results stable across time zones and
+  daylight-saving changes. Shipped bilingually with five focused tests and responsive browser QA.
 - **Sep 14 (Mon) — Business Days Between Dates.** Count weekdays between two dates with an option to
   include the end date. Let users configure which weekdays are weekends; do not add a country-holiday
   service in this first version.
