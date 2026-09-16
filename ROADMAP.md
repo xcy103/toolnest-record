@@ -269,7 +269,7 @@ allocations do not establish actual owner hours on those dates.
 
 ## Next Tool Wave — Dates + Local Data (Sep 11–24)
 
-> **Status: in progress (1/10 complete; 41 tools total).** Ten 4.5-hour workday allocations,
+> **Status: in progress (3/10 complete; 43 tools total).** Ten 4.5-hour workday allocations,
 > Monday through Friday only. This wave
 > deliberately stays front-end-only: calculations and file parsing run in the browser, with no
 > uploads, accounts, paid APIs or additional server workload. Each tool includes English and Chinese
@@ -281,12 +281,12 @@ allocations do not establish actual owner hours on those dates.
   months or years from a selected date. Month/year calculations clamp to the target month's last
   valid day, while UTC calendar fields keep date-only results stable across time zones and
   daylight-saving changes. Shipped bilingually with five focused tests and responsive browser QA.
-- **Sep 14 (Mon) — Business Days Between Dates.** Count weekdays between two dates with an option to
-  include the end date. Let users configure which weekdays are weekends; do not add a country-holiday
-  service in this first version.
-- **Sep 15 (Tue) — Business Date Calculator.** Move forward or backward by a requested number of
-  working days using the same configurable-weekend logic. Share and test the calendar logic created
-  for the previous tool.
+- **Sep 14 (Mon) — Business Days Between Dates** ✅ (`5a9eb5c`, completed Sep 15). Counts dates after
+  the start with an include-end option, configurable 0–6-day weekends and no holiday-service
+  dependency. Shows working, skipped and total dates with bilingual responsive UI.
+- **Sep 15 (Tue) — Business Date Calculator** ✅ (`5a9eb5c`). Moves forward or backward by up to
+  9,999 working days using the shared configurable-weekend logic. Reports the resulting date,
+  calendar distance and skipped weekend days.
 - **Sep 16 (Wed) — Week Number Calculator.** Show the ISO week number, ISO week-year and the Monday-to-
   Sunday date range for any selected date, including year-boundary cases.
 - **Sep 17 (Thu) — Weekday Calculator.** Show the weekday for any valid date and provide a simple
