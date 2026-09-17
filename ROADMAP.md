@@ -269,7 +269,7 @@ allocations do not establish actual owner hours on those dates.
 
 ## Next Tool Wave — Dates + Local Data (Sep 11–24)
 
-> **Status: in progress (3/10 complete; 43 tools total).** Ten 4.5-hour workday allocations,
+> **Status: in progress (5/10 complete; 45 tools total).** Ten 4.5-hour workday allocations,
 > Monday through Friday only. This wave
 > deliberately stays front-end-only: calculations and file parsing run in the browser, with no
 > uploads, accounts, paid APIs or additional server workload. Each tool includes English and Chinese
@@ -287,10 +287,10 @@ allocations do not establish actual owner hours on those dates.
 - **Sep 15 (Tue) — Business Date Calculator** ✅ (`5a9eb5c`). Moves forward or backward by up to
   9,999 working days using the shared configurable-weekend logic. Reports the resulting date,
   calendar distance and skipped weekend days.
-- **Sep 16 (Wed) — Week Number Calculator.** Show the ISO week number, ISO week-year and the Monday-to-
-  Sunday date range for any selected date, including year-boundary cases.
-- **Sep 17 (Thu) — Weekday Calculator.** Show the weekday for any valid date and provide a simple
-  occurrence search, such as finding the next date on a chosen weekday.
+- **Sep 16 (Wed) — Week Number Calculator** ✅ (`b1edad7`, completed Sep 17). Shows ISO week number,
+  ISO week-year and Monday-to-Sunday range, including cross-year weeks.
+- **Sep 17 (Thu) — Weekday Calculator** ✅ (`b1edad7`). Shows a date's weekday and the next date on
+  a selected weekday, searching strictly after the chosen date.
 - **Sep 18 (Fri) — Age Calculator.** Calculate calendar age in years, months and days, plus the next
   birthday and days remaining. Keep this as a general date utility, not a medical or legal age claim.
 
