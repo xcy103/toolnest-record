@@ -269,7 +269,7 @@ allocations do not establish actual owner hours on those dates.
 
 ## Next Tool Wave — Dates + Local Data (Sep 11–24)
 
-> **Status: in progress (6/10 complete; 46 tools total).** Ten 4.5-hour workday allocations,
+> **Status: in progress (7/10 complete; 47 tools total).** Ten 4.5-hour workday allocations,
 > Monday through Friday only. This wave
 > deliberately stays front-end-only: calculations and file parsing run in the browser, with no
 > uploads, accounts, paid APIs or additional server workload. Each tool includes English and Chinese
@@ -297,9 +297,9 @@ allocations do not establish actual owner hours on those dates.
 
 ### Text and Data Tools (4 workdays)
 
-- **Sep 21 (Mon) — CSV Table Viewer.** Open CSV locally and present a readable table with column
-  search, sorting and row filtering. Reuse the tested RFC 4180 parser from the JSON ↔ CSV tool and
-  set practical browser-side row, column and file-size limits.
+- **Sep 21 (Mon) — CSV Table Viewer** ✅ (`721b5ca`). Opens or accepts pasted CSV locally and presents
+  a searchable, sortable, paginated table. Reuses the tested RFC 4180 parser and limits input to
+  2 MB, 5,000 data rows and 100 columns for predictable browser-side performance.
 - **Sep 22 (Tue) — List Comparison Tool.** Compare two line-based lists and show intersection,
   left-only, right-only and combined unique results, with case and whitespace options. Build on the
   existing shared line-processing utilities.
