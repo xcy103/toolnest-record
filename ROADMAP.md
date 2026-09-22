@@ -269,7 +269,7 @@ allocations do not establish actual owner hours on those dates.
 
 ## Next Tool Wave — Dates + Local Data (Sep 11–24)
 
-> **Status: in progress (7/10 complete; 47 tools total).** Ten 4.5-hour workday allocations,
+> **Status: in progress (8/10 complete; 48 tools total).** Ten 4.5-hour workday allocations,
 > Monday through Friday only. This wave
 > deliberately stays front-end-only: calculations and file parsing run in the browser, with no
 > uploads, accounts, paid APIs or additional server workload. Each tool includes English and Chinese
@@ -300,9 +300,9 @@ allocations do not establish actual owner hours on those dates.
 - **Sep 21 (Mon) — CSV Table Viewer** ✅ (`721b5ca`). Opens or accepts pasted CSV locally and presents
   a searchable, sortable, paginated table. Reuses the tested RFC 4180 parser and limits input to
   2 MB, 5,000 data rows and 100 columns for predictable browser-side performance.
-- **Sep 22 (Tue) — List Comparison Tool.** Compare two line-based lists and show intersection,
-  left-only, right-only and combined unique results, with case and whitespace options. Build on the
-  existing shared line-processing utilities.
+- **Sep 22 (Tue) — List Comparison Tool** ✅ (`da80c1a`). Compares two line-based lists and shows
+  intersection, left-only, right-only and combined unique results. Case and surrounding-whitespace
+  options use the existing shared line-processing rules; output keeps first-occurrence order.
 - **Sep 23 (Wed) — Slug Generator.** Convert titles or phrases into URL-friendly slugs with separator,
   lowercase and duplicate-separator controls. Define predictable handling for accented Latin text
   and Chinese input instead of silently deleting meaningful content.
