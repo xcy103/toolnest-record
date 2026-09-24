@@ -269,7 +269,7 @@ allocations do not establish actual owner hours on those dates.
 
 ## Next Tool Wave — Dates + Local Data (Sep 11–24)
 
-> **Status: in progress (8/10 complete; 48 tools total).** Ten 4.5-hour workday allocations,
+> **Status: in progress (9/10 complete; 49 tools total).** Ten 4.5-hour workday allocations,
 > Monday through Friday only. This wave
 > deliberately stays front-end-only: calculations and file parsing run in the browser, with no
 > uploads, accounts, paid APIs or additional server workload. Each tool includes English and Chinese
@@ -303,9 +303,10 @@ allocations do not establish actual owner hours on those dates.
 - **Sep 22 (Tue) — List Comparison Tool** ✅ (`da80c1a`). Compares two line-based lists and shows
   intersection, left-only, right-only and combined unique results. Case and surrounding-whitespace
   options use the existing shared line-processing rules; output keeps first-occurrence order.
-- **Sep 23 (Wed) — Slug Generator.** Convert titles or phrases into URL-friendly slugs with separator,
-  lowercase and duplicate-separator controls. Define predictable handling for accented Latin text
-  and Chinese input instead of silently deleting meaningful content.
+- **Sep 23 (Wed) — Slug Generator** ✅ (`f620516`). Converts titles or phrases into readable slugs
+  and URL-encoded path segments with separator, lowercase and repeated-separator controls. Common
+  Latin accents become plain letters; Chinese text stays in the readable slug and is encoded in the
+  URL version.
 - **Sep 24 (Thu) — Random Picker.** Pick one or more entries from a pasted list using
   `crypto.getRandomValues`, with duplicate-removal and without-replacement options. Show the input
   count and make repeated draws clear without adding storage or accounts.
