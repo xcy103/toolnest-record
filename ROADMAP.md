@@ -269,7 +269,7 @@ allocations do not establish actual owner hours on those dates.
 
 ## Next Tool Wave — Dates + Local Data (Sep 11–24)
 
-> **Status: in progress (9/10 complete; 49 tools total).** Ten 4.5-hour workday allocations,
+> **Status: complete (10/10; 50 tools total).** Ten 4.5-hour workday allocations,
 > Monday through Friday only. This wave
 > deliberately stays front-end-only: calculations and file parsing run in the browser, with no
 > uploads, accounts, paid APIs or additional server workload. Each tool includes English and Chinese
@@ -307,9 +307,9 @@ allocations do not establish actual owner hours on those dates.
   and URL-encoded path segments with separator, lowercase and repeated-separator controls. Common
   Latin accents become plain letters; Chinese text stays in the readable slug and is encoded in the
   URL version.
-- **Sep 24 (Thu) — Random Picker.** Pick one or more entries from a pasted list using
-  `crypto.getRandomValues`, with duplicate-removal and without-replacement options. Show the input
-  count and make repeated draws clear without adding storage or accounts.
+- **Sep 24 (Thu) — Random Picker** ✅ (`cc94b51`). Draws one or more entries from a pasted list using
+  `crypto.getRandomValues`, with duplicate-removal and without-replacement options. Shows input and
+  eligible counts, validates draw size and numbers repeated draws without storage or accounts.
 
 **Remaining work:**
 
@@ -317,8 +317,6 @@ allocations do not establish actual owner hours on those dates.
   fallback used by the sitemap and canonicals).
 - Repository license decision: the source is public, but there is currently no `LICENSE` file.
   Choose whether to adopt MIT or another license before describing the project as open source.
-- Complete the planned Sep 11–24 Dates + Local Data wave. If all ten tools ship, the library grows
-  from 40 to 50 tools without adding backend infrastructure.
 - Research the wave after Sep 24. Lightweight developer, CSS/design and everyday calculator tools
   remain preferred; PDF, video and API-backed AI tools are deferred as higher-cost options.
 - Analytics deliberately **not** added — the privacy page now promises there is none, so
