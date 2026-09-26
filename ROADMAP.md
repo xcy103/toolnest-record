@@ -313,6 +313,11 @@ allocations do not establish actual owner hours on those dates.
 
 **Remaining work:**
 
+- **Sep 25 (Fri) - Post-wave CSV reliability checks** completed Sep 26 after the reported Codex
+  failure (`17cb364`). Fixed leading-BOM parsing and stale asynchronous file reads; added regression
+  coverage. All 125 tests, lint and the production build passed. This is maintenance after the
+  completed wave, not an additional pre-planned tool or a new Saturday workday.
+
 - Custom domain (once chosen, `NEXT_PUBLIC_SITE_URL` replaces the `toolnest.vercel.app`
   fallback used by the sitemap and canonicals).
 - Repository license decision: the source is public, but there is currently no `LICENSE` file.
