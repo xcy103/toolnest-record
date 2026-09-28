@@ -322,10 +322,55 @@ allocations do not establish actual owner hours on those dates.
   fallback used by the sitemap and canonicals).
 - Repository license decision: the source is public, but there is currently no `LICENSE` file.
   Choose whether to adopt MIT or another license before describing the project as open source.
-- Research the wave after Sep 24. Lightweight developer, CSS/design and everyday calculator tools
-  remain preferred; PDF, video and API-backed AI tools are deferred as higher-cost options.
+- Execute the Sep 28-Oct 9 lightweight tool wave below. PDF, video and API-backed AI tools
+  remain deferred as higher-cost options.
 - Analytics deliberately **not** added — the privacy page now promises there is none, so
   adding any would be a documented change, not a quiet one.
+
+---
+
+## Next Tool Wave - Links, Data and CSS (Sep 28-Oct 9)
+
+**Status: 1/10 complete; 51 tools live; 9 planned workdays remain.**
+
+Ten workdays, Monday-Friday only: Sep 28-Oct 2 and Oct 5-9. Each day has a standard
+4.5-hour allocation, 45 hours total; allocations are not measured actual work time.
+Weekend dates Oct 3-4 are excluded. All tools run locally in the browser with no
+accounts, paid APIs, file uploads or additional server infrastructure. Starting count: 50 tools.
+
+Every day's definition of done includes English/Chinese UI, accessible input/error/empty states,
+copyable output, registry/search/category integration, metadata/structured data/sitemap,
+focused regression tests, lint/build and desktop/phone browser checks. Scope can be reduced
+before release if a day's testing reveals complexity; unsupported behavior must not be guessed.
+
+| Day | Date | Task | Bounded scope and learning focus | Status |
+| --- | --- | --- | --- | --- |
+| 1 | Sep 28 (Mon) | URL Parser | Native URL parsing; optional absolute base; components and ordered decoded query pairs, preserving duplicates and empty values. Never fetch or navigate to input URLs. Learn URL normalization and relative resolution. | Complete (`344b74c`) |
+| 2 | Sep 29 (Tue) | UTM Link Builder | Source, medium, campaign and optional term/content; preserve unrelated existing query parameters and fragments; replace only selected UTM keys. Local link construction, no campaign tracking. Learn query encoding. | Planned |
+| 3 | Sep 30 (Wed) | JSON Flatten / Unflatten | Convert nested JSON to a JSON Pointer-keyed map and back; preserve arrays, empty containers and escaped keys; reject conflicting paths. Limits on size/depth. Learn reversible data structures. | Planned |
+| 4 | Oct 1 (Thu) | JSON Path Explorer | Browse JSON as a collapsible tree, search keys, copy selected values and JSON Pointer paths. No arbitrary JSONPath evaluator or code execution. Learn recursive rendering and accessible tree navigation. | Planned |
+| 5 | Oct 2 (Fri) | String Escape / Unescape | Plain text to/from a JSON string literal, with validated errors and Unicode/newline/quote examples. Distinct from URL, HTML and Base64 encoding. Learn literal serialization. | Planned |
+| 6 | Oct 5 (Mon) | PX / REM Converter | Two-way numeric conversion with configurable positive root font size; a bounded list mode for multiple values. No page scraping or CSS parsing. Learn input validation and decimal formatting. | Planned |
+| 7 | Oct 6 (Tue) | CSS Box Shadow Generator | Offset, blur, spread, color, opacity and inset; live preview and copyable CSS; up to three layers. Learn shadow composition and controlled sliders. | Planned |
+| 8 | Oct 7 (Wed) | CSS Border Radius Generator | Four independent corner radii with linked/unlinked mode and px/% units; live preview and copyable CSS. No complex elliptical eight-value mode in v1. Learn CSS shorthand. | Planned |
+| 9 | Oct 8 (Thu) | Aspect Ratio Calculator | Reduce integer width/height to a ratio and solve a missing dimension using common/custom ratios; explicit rounding. Numeric calculation only, no image/video processing. Learn greatest common divisor. | Planned |
+| 10 | Oct 9 (Fri) | Duration Calculator | Add/subtract bounded nonnegative HH:MM:SS durations, convert totals to seconds/minutes/hours, handle results longer than 24 hours. No time zones or calendar-date arithmetic. Learn duration parsing and carry/borrow rules. | Planned |
+
+**Research and scope decisions (Sep 28):**
+
+- [MDN URL API](https://developer.mozilla.org/en-US/docs/Web/API/URL) and
+  [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) support a
+  dependency-free link utility, including ordered repeated parameters. Native parsing is preferred
+  over a handwritten URL grammar.
+- MDN's [box-shadow reference](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) and
+  [border-radius reference](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) provide
+  established CSS workflows that fit local previews.
+- [Omni's aspect ratio calculator](https://www.omnicalculator.com/other/aspect-ratio) is a reference
+  for ratio/dimension calculation, not a requirement for media conversion.
+- Existing ToolNest covers data-size units, image resizing, generic text diff and many date tools;
+  those are not added again. The URL parser is distinct from the existing URL encoder/decoder.
+- No traffic or revenue uplift is claimed. PDF/video/backend AI remain deferred. Domain, license
+  and analytics policies are unchanged. The target is 60 tools if all ten items ship.
 
 ---
 
