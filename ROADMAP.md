@@ -331,7 +331,7 @@ allocations do not establish actual owner hours on those dates.
 
 ## Next Tool Wave - Links, Data and CSS (Sep 28-Oct 9)
 
-**Status: 1/10 complete; 51 tools live; 9 planned workdays remain.**
+**Status: 2/10 complete; 52 tools live; 8 planned workdays remain.**
 
 Ten workdays, Monday-Friday only: Sep 28-Oct 2 and Oct 5-9. Each day has a standard
 4.5-hour allocation, 45 hours total; allocations are not measured actual work time.
@@ -346,7 +346,7 @@ before release if a day's testing reveals complexity; unsupported behavior must 
 | Day | Date | Task | Bounded scope and learning focus | Status |
 | --- | --- | --- | --- | --- |
 | 1 | Sep 28 (Mon) | URL Parser | Native URL parsing; optional absolute base; components and ordered decoded query pairs, preserving duplicates and empty values. Never fetch or navigate to input URLs. Learn URL normalization and relative resolution. | Complete (`344b74c`) |
-| 2 | Sep 29 (Tue) | UTM Link Builder | Source, medium, campaign and optional term/content; preserve unrelated existing query parameters and fragments; replace only selected UTM keys. Local link construction, no campaign tracking. Learn query encoding. | Planned |
+| 2 | Sep 29 (Tue) | UTM Link Builder | Source, medium, campaign and optional term/content; preserve unrelated existing query parameters and fragments; replace only selected UTM keys. Local link construction, no campaign tracking. Learn query encoding. | Complete (`334e2e3`) |
 | 3 | Sep 30 (Wed) | JSON Flatten / Unflatten | Convert nested JSON to a JSON Pointer-keyed map and back; preserve arrays, empty containers and escaped keys; reject conflicting paths. Limits on size/depth. Learn reversible data structures. | Planned |
 | 4 | Oct 1 (Thu) | JSON Path Explorer | Browse JSON as a collapsible tree, search keys, copy selected values and JSON Pointer paths. No arbitrary JSONPath evaluator or code execution. Learn recursive rendering and accessible tree navigation. | Planned |
 | 5 | Oct 2 (Fri) | String Escape / Unescape | Plain text to/from a JSON string literal, with validated errors and Unicode/newline/quote examples. Distinct from URL, HTML and Base64 encoding. Learn literal serialization. | Planned |
