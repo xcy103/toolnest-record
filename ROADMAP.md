@@ -331,7 +331,7 @@ allocations do not establish actual owner hours on those dates.
 
 ## Next Tool Wave - Links, Data and CSS (Sep 28-Oct 9)
 
-**Status: 4/10 complete; 54 tools live; 6 planned workdays remain.**
+**Status: 5/10 complete; 55 tools live; 5 planned workdays remain.**
 
 Ten workdays, Monday-Friday only: Sep 28-Oct 2 and Oct 5-9. Each day has a standard
 4.5-hour allocation, 45 hours total; allocations are not measured actual work time.
@@ -349,7 +349,7 @@ before release if a day's testing reveals complexity; unsupported behavior must 
 | 2 | Sep 29 (Tue) | UTM Link Builder | Source, medium, campaign and optional term/content; preserve unrelated existing query parameters and fragments; replace only selected UTM keys. Local link construction, no campaign tracking. Learn query encoding. | Complete (`334e2e3`) |
 | 3 | Sep 30 (Wed) | JSON Flatten / Unflatten | Convert nested JSON to a JSON Pointer-keyed map and back; preserve arrays, empty containers and escaped keys; reject conflicting paths. Limits on size/depth. Learn reversible data structures. | Complete (`053a95b`) |
 | 4 | Oct 1 (Thu) | JSON Path Explorer | Browse JSON as a collapsible tree, search keys, copy selected values and JSON Pointer paths. No arbitrary JSONPath evaluator or code execution. Learn recursive rendering and accessible tree navigation. | Complete (`886f2ab`) |
-| 5 | Oct 2 (Fri) | String Escape / Unescape | Plain text to/from a JSON string literal, with validated errors and Unicode/newline/quote examples. Distinct from URL, HTML and Base64 encoding. Learn literal serialization. | Planned |
+| 5 | Oct 2 (Fri) | String Escape / Unescape | Plain text to/from a JSON string literal, with validated errors and Unicode/newline/quote examples. Distinct from URL, HTML and Base64 encoding. Learn literal serialization. | Complete (`a7599d2`) |
 | 6 | Oct 5 (Mon) | PX / REM Converter | Two-way numeric conversion with configurable positive root font size; a bounded list mode for multiple values. No page scraping or CSS parsing. Learn input validation and decimal formatting. | Planned |
 | 7 | Oct 6 (Tue) | CSS Box Shadow Generator | Offset, blur, spread, color, opacity and inset; live preview and copyable CSS; up to three layers. Learn shadow composition and controlled sliders. | Planned |
 | 8 | Oct 7 (Wed) | CSS Border Radius Generator | Four independent corner radii with linked/unlinked mode and px/% units; live preview and copyable CSS. No complex elliptical eight-value mode in v1. Learn CSS shorthand. | Planned |
