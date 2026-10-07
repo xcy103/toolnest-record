@@ -331,7 +331,7 @@ allocations do not establish actual owner hours on those dates.
 
 ## Next Tool Wave - Links, Data and CSS (Sep 28-Oct 9)
 
-**Status: 7/10 complete; 57 tools live; 3 planned workdays remain.**
+**Status: 8/10 complete; 58 tools live; 2 planned workdays remain.**
 
 Ten workdays, Monday-Friday only: Sep 28-Oct 2 and Oct 5-9. Each day has a standard
 4.5-hour allocation, 45 hours total; allocations are not measured actual work time.
@@ -352,7 +352,7 @@ before release if a day's testing reveals complexity; unsupported behavior must 
 | 5 | Oct 2 (Fri) | String Escape / Unescape | Plain text to/from a JSON string literal, with validated errors and Unicode/newline/quote examples. Distinct from URL, HTML and Base64 encoding. Learn literal serialization. | Complete (`a7599d2`) |
 | 6 | Oct 5 (Mon) | PX / REM Converter | Two-way numeric conversion with configurable positive root font size; a bounded list mode for multiple values. No page scraping or CSS parsing. Learn input validation and decimal formatting. | Complete (`71e5404`) |
 | 7 | Oct 6 (Tue) | CSS Box Shadow Generator | Offset, blur, spread, color, opacity and inset; live preview and copyable CSS; up to three layers. Learn shadow composition and controlled sliders. | Complete (`177b374`) |
-| 8 | Oct 7 (Wed) | CSS Border Radius Generator | Four independent corner radii with linked/unlinked mode and px/% units; live preview and copyable CSS. No complex elliptical eight-value mode in v1. Learn CSS shorthand. | Planned |
+| 8 | Oct 7 (Wed) | CSS Border Radius Generator | Four independent corner radii with linked/unlinked mode and px/% units; live preview and copyable CSS. No complex elliptical eight-value mode in v1. Learn CSS shorthand. | Complete (`dfc2b4e`) |
 | 9 | Oct 8 (Thu) | Aspect Ratio Calculator | Reduce integer width/height to a ratio and solve a missing dimension using common/custom ratios; explicit rounding. Numeric calculation only, no image/video processing. Learn greatest common divisor. | Planned |
 | 10 | Oct 9 (Fri) | Duration Calculator | Add/subtract bounded nonnegative HH:MM:SS durations, convert totals to seconds/minutes/hours, handle results longer than 24 hours. No time zones or calendar-date arithmetic. Learn duration parsing and carry/borrow rules. | Planned |
 
