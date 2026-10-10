@@ -331,7 +331,7 @@ allocations do not establish actual owner hours on those dates.
 
 ## Next Tool Wave - Links, Data and CSS (Sep 28-Oct 9)
 
-**Status: 9/10 complete; 59 tools live; 1 planned workday remains.**
+**Status: 10/10 complete; 60 tools live; no planned workdays remain in this wave.**
 
 Ten workdays, Monday-Friday only: Sep 28-Oct 2 and Oct 5-9. Each day has a standard
 4.5-hour allocation, 45 hours total; allocations are not measured actual work time.
@@ -354,7 +354,7 @@ before release if a day's testing reveals complexity; unsupported behavior must 
 | 7 | Oct 6 (Tue) | CSS Box Shadow Generator | Offset, blur, spread, color, opacity and inset; live preview and copyable CSS; up to three layers. Learn shadow composition and controlled sliders. | Complete (`177b374`) |
 | 8 | Oct 7 (Wed) | CSS Border Radius Generator | Four independent corner radii with linked/unlinked mode and px/% units; live preview and copyable CSS. No complex elliptical eight-value mode in v1. Learn CSS shorthand. | Complete (`dfc2b4e`) |
 | 9 | Oct 8 (Thu) | Aspect Ratio Calculator | Reduce integer width/height to a ratio and solve a missing dimension using common/custom ratios; explicit rounding. Numeric calculation only, no image/video processing. Learn greatest common divisor. | Complete (`0c946df`) |
-| 10 | Oct 9 (Fri) | Duration Calculator | Add/subtract bounded nonnegative HH:MM:SS durations, convert totals to seconds/minutes/hours, handle results longer than 24 hours. No time zones or calendar-date arithmetic. Learn duration parsing and carry/borrow rules. | Planned |
+| 10 | Oct 9 (Fri) | Duration Calculator | Add/subtract bounded nonnegative HH:MM:SS durations, convert totals to seconds/minutes/hours, handle results longer than 24 hours. No time zones or calendar-date arithmetic. Learn duration parsing and carry/borrow rules. | Complete (`fe37bcb`) |
 
 **Research and scope decisions (Sep 28):**
 
