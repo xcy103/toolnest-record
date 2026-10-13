@@ -374,6 +374,22 @@ before release if a day's testing reveals complexity; unsupported behavior must 
 
 ---
 
+## Post-wave Maintenance (Oct 12)
+
+**Complete (`88797f9`); 60 tools remain live.** User-approved maintenance after the
+completed wave, not day 1 of a new ten-workday plan.
+
+- Prevented PX/REM numeric overflow and bounded converted results to +/-1,000,000,000,000.
+  Invalid results are cleared, copy is disabled, and batch errors identify the source line.
+- JSON Flatten/Unflatten and JSON Path Explorer now reject nonfinite numbers instead of
+  silently serializing overflowing numeric values as null.
+- Added three regression tests; all 187 tests, lint and the production build passed.
+  Checked all 20 localized routes from the last wave and browser error/recovery behavior.
+- A new development wave still needs agreement. No domain, license, analytics, dependency
+  or infrastructure decisions were changed.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
