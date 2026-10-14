@@ -390,6 +390,21 @@ completed wave, not day 1 of a new ten-workday plan.
 
 ---
 
+## Shared Copy Feedback Maintenance (Oct 13)
+
+**Complete (`484eb27`); 60 tools remain live.** Continued post-wave maintenance.
+
+- Bound the shared CopyButton success indicator to the text actually copied, so changing
+  output no longer labels the new, uncopied result as copied.
+- Replaced the prior feedback timer on every copy; cleaned up timers on unmount and ignored
+  superseded asynchronous clipboard completions.
+- All 187 existing tests, lint and the production build passed. Browser checks covered both
+  languages, edited results, clearing, repeated copies, empty root JSON Pointer copying
+  and independent pointer/value buttons.
+- No new development wave or infrastructure changes were introduced.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
