@@ -405,6 +405,21 @@ completed wave, not day 1 of a new ten-workday plan.
 
 ---
 
+## CSV Column Fidelity Maintenance (Oct 14)
+
+**Complete (`ab2b836`); 60 tools remain live.** Continued post-wave maintenance.
+
+- Preserved CSV headers named __proto__ as ordinary own properties without changing
+  the generated record's prototype.
+- JSON-to-CSV now reads own fields only, so missing constructor/toString columns stay
+  blank instead of exporting inherited native functions.
+- Added three regression tests for special headers, missing fields and quoted/multiline
+  round trips. All 190 tests, lint and the production build passed.
+- Browser checks covered both directions, both languages, type inference, copy and mobile
+  layout. No dependencies or infrastructure changes were introduced.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
