@@ -420,6 +420,20 @@ completed wave, not day 1 of a new ten-workday plan.
 
 ---
 
+## CSV Record Preservation Maintenance (Oct 15)
+
+**Complete (`52f33b9`); 60 tools remain live.** Maintenance assigned to this workday.
+
+- Preserved explicitly quoted empty single-column records while still ignoring bare blank lines.
+- Quoted single-column empty exported values so importing the CSV does not drop those rows;
+  existing multi-column empty-cell formatting is unchanged.
+- Counted parsed CSV records instead of physical lines in the converter's row summary.
+- Added four regression tests; all 194 tests, lint and the production build passed.
+  Browser checks covered bilingual round trips, copying, multiline row counts and the CSV viewer.
+- No new tool wave, dependencies or infrastructure changes were introduced.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
