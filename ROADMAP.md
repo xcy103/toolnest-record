@@ -434,6 +434,20 @@ completed wave, not day 1 of a new ten-workday plan.
 
 ---
 
+## CSV Duplicate Header Maintenance (Oct 16)
+
+**Complete (`d550756`); 60 tools remain live.** Continued post-wave maintenance.
+
+- CSV-to-JSON now rejects duplicate resolved header names instead of silently overwriting
+  earlier columns. Checks include trimmed names and generated empty-header names.
+- Added localized conflict details with the column position and resolved name. Users can
+  rename headers or disable header mode; headerless data and case-distinct names remain valid.
+- Added four regression tests. All 198 tests, lint and production build passed; English and
+  Chinese browser checks verified errors, disabled copy and recovery with correct output.
+- No new tools, dependencies, infrastructure or development wave were added.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
