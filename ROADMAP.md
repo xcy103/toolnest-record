@@ -448,6 +448,21 @@ completed wave, not day 1 of a new ten-workday plan.
 
 ---
 
+## CSV Integer Fidelity Maintenance (Oct 19)
+
+**Complete (`929fc1a`); 60 tools remain live.** Continued workday maintenance.
+October 17-18 were weekend rest days.
+
+- CSV automatic type detection now retains unsafe integer values as original strings instead
+  of silently rounding long identifiers. Safe integers and ordinary inferred types remain supported.
+- Added two regression tests covering signed long IDs, exponent forms, whitespace preservation,
+  safe integer boundaries and disabled inference.
+- All 200 tests, lint and production build passed. Bilingual browser checks verified displayed
+  and copied values, safe boundaries and the inference toggle.
+- Scope is CSV inference, not arbitrary-precision JSON parsing. No new tools or dependencies.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
