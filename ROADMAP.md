@@ -463,6 +463,20 @@ October 17-18 were weekend rest days.
 
 ---
 
+## Calculator Factorial Maintenance (Oct 20)
+
+**Complete (`d1b15e1`); 60 tools remain live.** Continued workday maintenance.
+
+- Reject factorial inputs above 170 before looping: their factorial exceeds the finite
+  Number range. This prevents large inputs from freezing the browser.
+- Recognize postfix factorial as a completed value for following plus/minus operators
+  and implicit multiplication.
+- Added four regression tests; all 204 tests, lint and production build passed.
+  Bilingual browser QA verified overflow rejection, boundary recovery, arithmetic and copy.
+- No new tools, dependencies or infrastructure changes were introduced.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
