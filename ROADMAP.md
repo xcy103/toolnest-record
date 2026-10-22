@@ -477,6 +477,19 @@ October 17-18 were weekend rest days.
 
 ---
 
+## HTML Entity Decode Maintenance (Oct 21)
+
+**Complete (`2834221`); 60 tools remain live.** Continued workday maintenance.
+
+- Strictly validated decimal versus hexadecimal digits before parsing numeric entities,
+  preventing partial decoding of malformed decimal sequences.
+- Limited named-entity lookup to own entries, so unknown constructor-like names stay unchanged.
+- Added three regression tests; all 207 tests, lint and production build passed.
+  Bilingual browser QA verified mixed input, copying, clearing and single-layer decoding.
+- No new tools, dependencies, infrastructure or development wave were added.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
