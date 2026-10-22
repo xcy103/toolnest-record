@@ -490,6 +490,19 @@ October 17-18 were weekend rest days.
 
 ---
 
+## CSV Blank Sorting Maintenance (Oct 22)
+
+**Complete (`4834d59`); 60 tools remain live.** Continued workday maintenance.
+
+- Treat whitespace-only cells as blank for sorting, keeping them last in ascending and
+  descending order while preserving original cell content and stable order.
+- Keep numeric zero distinct from blank values.
+- Added two regression tests; all 209 tests, lint and production build passed.
+  Bilingual browser QA verified numeric ordering and blank placement.
+- No tools, dependencies, infrastructure or new development wave were added.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
