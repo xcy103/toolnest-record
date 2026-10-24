@@ -503,6 +503,20 @@ October 17-18 were weekend rest days.
 
 ---
 
+## CSV Quote Validation Maintenance (Oct 23)
+
+**Complete (`043bd0d`); 60 tools remain live.** Maintenance assigned to Friday.
+
+- Reject malformed quote placement rather than silently joining text after a quoted field
+  or accepting quotes inside an unquoted field.
+- Added localized physical-line diagnostics in the converter and viewer, with correct
+  quoted CR/LF/CRLF line tracking.
+- Added four regression tests; all 213 tests, lint and production build passed.
+  Browser QA verified rejection, valid escaped/multiline recovery and copying.
+- No Saturday workday, new tools, dependencies or infrastructure changes were added.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
