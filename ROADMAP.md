@@ -517,6 +517,20 @@ October 17-18 were weekend rest days.
 
 ---
 
+## YAML Conversion Maintenance (Oct 26)
+
+**Complete (`fd2d9fd`); 60 tools remain live.** Continued workday maintenance after
+the October 24-25 weekend rest days.
+
+- Handle empty/comment-only YAML documents as JSON null rather than accessing a missing document.
+- Reject nonfinite YAML numbers before JSON serialization silently changes them to null.
+  Added dedicated English/Chinese error messages; quoted strings remain supported.
+- Added three regression tests; all 216 tests, lint and production build passed.
+  Browser QA verified comment-only output/copy, rejection, recovery and both languages.
+- No new tools, dependencies, infrastructure or development wave were added.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
