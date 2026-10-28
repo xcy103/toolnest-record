@@ -531,6 +531,19 @@ the October 24-25 weekend rest days.
 
 ---
 
+## Unit Conversion Maintenance (Oct 27)
+
+**Complete (`f1f27ba`); 60 tools remain live.** Continued workday maintenance.
+
+- Calculate linear conversion ratios before multiplying to avoid unnecessary intermediate
+  overflow when the final result is finite.
+- Preserve valid same-unit conversions exactly and reject unknown temperature symbols.
+- Added three regression tests; all 219 tests, lint and production build passed.
+  Bilingual browser QA verified large values, identity conversion, temperature and copy.
+- No new tools, dependencies, infrastructure or development wave were added.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
