@@ -558,6 +558,19 @@ the October 24-25 weekend rest days.
 
 ---
 
+## Timestamp Date-control Maintenance (Oct 29)
+
+**Complete (`b4bc810`); 60 tools remain live.** Continued workday maintenance.
+
+- Preserve milliseconds in local date input formatting and permit 0.001-second input steps.
+- Pad positive years to at least four digits; return an empty control value for invalid dates
+  and nonpositive local years that the date input cannot represent.
+- Added three regression tests; all 226 tests, lint and production build passed.
+  Bilingual browser QA verified positive/negative millisecond mode changes and copying.
+- No new tools, dependencies, infrastructure or development wave were added.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
