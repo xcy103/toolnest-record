@@ -544,6 +544,20 @@ the October 24-25 weekend rest days.
 
 ---
 
+## Unicode Whole-word Maintenance (Oct 28)
+
+**Complete (`289d0b2`); 60 tools remain live.** Continued workday maintenance.
+
+- Replaced ASCII-only whole-word boundaries with Unicode letter/number/mark/underscore
+  boundaries, supporting standalone Chinese and accented words without matching inside longer words.
+- Used native match iteration to advance zero-length Unicode matches safely while retaining
+  UTF-16 highlight offsets.
+- Added four regression tests; all 223 tests, lint and production build passed.
+  Bilingual browser QA verified matching, option switching, counts and copied output.
+- No new tools, dependencies, infrastructure or development wave were added.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
