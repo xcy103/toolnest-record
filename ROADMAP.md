@@ -571,6 +571,22 @@ the October 24-25 weekend rest days.
 
 ---
 
+## Business Date Performance Maintenance (Oct 30)
+
+**Complete (`07c033c`); 60 tools remain live.** Continued workday maintenance.
+
+- Skip complete weeks before counting the remaining working days, preserving signed
+  movement, custom weekends and moved/skipped-day totals within years 1–9999.
+- Keep the existing page input limit of 9999 business days.
+- Added three regression tests, including 27,559 comparisons against daily counting
+  across all valid weekend sets; all 229 tests, lint and production build passed.
+  Bilingual browser QA verified the maximum page input, reverse movement, a one-day
+  working week and copying.
+- No new tools, dependencies, infrastructure or development wave were added.
+- Next workday: November 2 (Monday), after the October 31–November 1 weekend.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
