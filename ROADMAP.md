@@ -587,6 +587,22 @@ the October 24-25 weekend rest days.
 
 ---
 
+## JSON-to-YAML Numeric Range Maintenance (Nov 2)
+
+**Complete (`d6f39be`); 60 tools remain live.** Continued maintenance after the
+October 31–November 1 weekend rest days.
+
+- Reject JSON numbers that parse to Infinity before they become YAML .inf,
+  including root values and nested containers.
+- Share the nonfinite validator across both conversion directions and provide
+  English/Chinese diagnostics; quoted numeric text remains supported.
+- Added three regression tests; all 232 tests, lint and production build passed.
+  Bilingual browser QA verified rejection, recovery, round trips and copying.
+- No new tools, dependencies, infrastructure or development wave were added.
+- Next workday: November 3 (Tuesday).
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
