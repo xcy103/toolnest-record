@@ -603,6 +603,20 @@ October 31–November 1 weekend rest days.
 
 ---
 
+## Stable Descending Text Sort Maintenance (Nov 3)
+
+**Complete (`56c4720`); 60 tools remain live.** Continued workday maintenance.
+
+- Apply descending direction inside the line comparator, preserving the original
+  order of equal case-insensitive or trimmed comparison keys.
+- Keep original line text, first-occurrence deduplication and requested line endings.
+- Added three regression tests; all 235 tests, lint and production build passed.
+  Bilingual browser QA verified equal-key ordering, counts, deduplication and copying.
+- No new tools, dependencies, infrastructure or development wave were added.
+- Next workday: November 4 (Wednesday).
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
