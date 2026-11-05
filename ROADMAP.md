@@ -617,6 +617,20 @@ October 31–November 1 weekend rest days.
 
 ---
 
+## Markdown Inline-code Maintenance (Nov 4)
+
+**Complete (`dd76336`); 60 tools remain live.** Continued workday maintenance.
+
+- Protect inline code from subsequent emphasis/link parsing so its syntax stays
+  literal while surrounding formatting continues to render.
+- Preserve prior HTML escaping and prevent temporary delimiter collisions.
+- Added three regression tests; all 238 tests, lint and production build passed.
+  Bilingual browser QA verified literal code, surrounding formatting and escaped HTML.
+- No new tools, dependencies, infrastructure or development wave were added.
+- Next workday: November 5 (Thursday).
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
