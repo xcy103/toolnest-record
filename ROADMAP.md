@@ -631,6 +631,21 @@ October 31–November 1 weekend rest days.
 
 ---
 
+## Percentage-change Numeric Maintenance (Nov 5)
+
+**Complete (`a66bdb8`); 60 tools remain live.** Continued workday maintenance.
+
+- Avoid subtraction overflow for large opposite-sign finite inputs when the
+  resulting percentage change is finite.
+- Retain direct subtraction for ordinary small deltas, zero-baseline rejection
+  and existing negative-baseline behavior.
+- Added two regression tests; all 240 tests, lint and production build passed.
+  Bilingual browser QA verified signed/asymmetric large changes, copying and zero rejection.
+- No new tools, dependencies, infrastructure or development wave were added.
+- Next workday: November 6 (Friday).
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
