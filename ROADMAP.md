@@ -646,6 +646,20 @@ October 31–November 1 weekend rest days.
 
 ---
 
+## Base64 Text Preservation Maintenance (Nov 6)
+
+**Complete (`ff740e9`); 60 tools remain live.** Continued workday maintenance.
+
+- Encode whitespace-only plain text and preserve leading BOM characters during
+  UTF-8 decoding, allowing those text values to survive conversion round trips.
+- Retain pasted Base64 whitespace tolerance and malformed UTF-8 rejection.
+- Added three regression tests; all 243 tests, lint and production build passed.
+  Bilingual browser QA verified whitespace, BOM, Unicode, copying and invalid input.
+- No new tools, dependencies, infrastructure or development wave were added.
+- Next workday: November 9 (Monday), after the November 7–8 weekend.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
