@@ -660,6 +660,18 @@ October 31–November 1 weekend rest days.
 
 ---
 
+## URL, Markdown and UTM Maintenance (Nov 9–12)
+
+- Nov 9 (`ec39a52`): URL whitespace preservation. URL encoding now accepts whitespace-only text. Decoding preserves literal spaces and newlines at the edges of the input. Component and whole-URL delimiter rules still apply.
+- Nov 10 (`a2e2f51`): Markdown ordered-list numbering. The preview uses the first marker as the start number for each ordered list. Later items count up in sequence. A start outside the supported integer range falls back to 1.
+- Nov 11 (`1817f5e`): UTM query encoding. The builder replaces existing tracking keys, including percent-encoded spellings, while retaining the order and original encoding of unrelated query entries.
+- Nov 12 (`683ef00`): UTM generated-link length validation. The builder checks the final encoded URL against its 20,000-character limit. An oversized result shows a localized message and disables copying.
+- All 249 tests, lint and production build passed. Browser checks covered URL
+  round trips, list numbering, query encoding, copying and both length messages.
+- Next workday: November 13 (Friday).
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
