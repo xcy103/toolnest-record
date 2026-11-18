@@ -680,6 +680,15 @@ October 31–November 1 weekend rest days.
 
 ---
 
+## JWT Decoder Maintenance (Nov 16–17)
+
+- Nov 16 (`9d66be3`), validated decoded header and payload objects and handled null, array and scalar input through the error display.
+- Nov 17 (`05889b2`), guarded timestamp date formatting and added localized range diagnostics.
+- Added four regression tests. All 253 tests, lint and production build passed. Bilingual browser QA covered errors, recovery, Unicode payload copying and timestamp ranges.
+- Next workday is November 18 (Wednesday).
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
