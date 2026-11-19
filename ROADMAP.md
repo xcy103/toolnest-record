@@ -689,6 +689,13 @@ October 31–November 1 weekend rest days.
 
 ---
 
+## Duration Calculator Validation (Nov 18)
+
+- Completed (`d49d561`). Format guidance appears under the affected input in both languages, and blank fields remain neutral while users enter durations.
+- All 253 tests, lint and production build passed. Browser checks covered both fields, recovery, arithmetic and copying.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
