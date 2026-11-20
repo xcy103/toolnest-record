@@ -696,6 +696,13 @@ October 31–November 1 weekend rest days.
 
 ---
 
+## QR Preview and Download (Nov 19)
+
+- Completed (`cdb269c`). The QR generator shows the preview and PNG download for the current text, size and correction level, with bilingual feedback during generation.
+- All 253 tests, lint and production build passed. Browser checks covered setting changes, download links, oversized input and clearing.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
