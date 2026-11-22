@@ -703,6 +703,13 @@ October 31–November 1 weekend rest days.
 
 ---
 
+## JSON String Round Trips (Nov 20)
+
+- Completed (`7565e7c`). The JSON string tool checks the escaped output against its reverse conversion limit and explains oversized results in both languages.
+- All 254 tests, lint and production build passed. Browser checks covered the limit message, recovery and copying.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
