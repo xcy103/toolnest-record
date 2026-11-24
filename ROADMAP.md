@@ -710,6 +710,13 @@ October 31–November 1 weekend rest days.
 
 ---
 
+## Aspect Ratio Exact Fractions (Nov 23)
+
+- Completed (`a203ba9`). The missing dimension is shown as a simplified exact fraction, consistent across equivalent ratios.
+- All 255 tests, lint and the production build passed. Verified the exact fraction in the browser.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
