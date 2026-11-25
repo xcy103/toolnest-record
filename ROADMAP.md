@@ -717,6 +717,13 @@ October 31–November 1 weekend rest days.
 
 ---
 
+## Slug Combining Marks (Nov 24)
+
+- Completed (`e0fc9a8`). Slugs drop unattached marks and preserve marks that are part of words.
+- All 256 tests, lint and production build passed. Verified emoji-only input, multilingual output and copying in the browser.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
