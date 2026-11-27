@@ -724,6 +724,14 @@ October 31–November 1 weekend rest days.
 
 ---
 
+## Small Percentage Results (Nov 25–26)
+
+- Nov 25 (`1b07caf`). Prevented premature underflow in percentage multiplication and ratios.
+- Nov 26 (`aac5134`). Displayed small nonzero results in scientific notation when two-decimal rounding would show zero.
+- All 258 tests, lint and production build passed. The Chinese browser preview displayed and copied the expected small result.
+
+---
+
 ## Tool Backlog (pick from here)
 
 Built ones are struck through; the rest are still fair game.
